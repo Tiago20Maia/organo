@@ -1,7 +1,10 @@
+import Banner from "./components/banner/banner";
+
 const App = () => {
   return (
-    <h1>App Organo</h1>
+    <div>
+      <Banner />
+    </div>
   );
-
-}
+};
 export default App;

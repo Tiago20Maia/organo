@@ -1,10 +1,10 @@
-import './index.css'
+import "./index.css";
 
-const TextField = () => {
+const TextField = (props) => {
   return (
-    <div className='text-field'>
-      <label>Nome</label>
-      <input placeholder='Digite o seu nome'/>
+    <div className="text-field">
+      <label>{props.label}</label>
+      <input placeholder={props.placeholder} />
     </div>
   );
 };

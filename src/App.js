@@ -1,9 +1,11 @@
-import Banner from "./components/banner/banner";
+import Banner from "./components/Banner";
+import TextField from "./components/TextField";
 
 const App = () => {
   return (
     <div>
       <Banner />
+      <TextField />
     </div>
   );
 };

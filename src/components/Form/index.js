@@ -4,7 +4,7 @@ import Button from "../Button";
 import "./index.css";
 import { useState } from "react";
 
-const Form = () => {
+const Form = (props) => {
   const times = [
     "Programação",
     "Front-End",
@@ -22,7 +22,12 @@ const Form = () => {
 
   const onSave = (event) => {
     event.preventDefault();
-    console.log("Salvar dados => ", name, office, image, time);
+    props.onNewEmployeeCreate({
+      name,
+      office,
+      image,
+      time,
+    });
   };
 
   return (

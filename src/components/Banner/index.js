@@ -1,6 +1,11 @@
 const Banner = () => {
   return (
-    <img src="/image/banner.png" alt="O banner principal da página do Organo" />
+    <header className="banner">
+      <img
+        src="/image/banner.png"
+        alt="O banner principal da página do Organo"
+      />
+    </header>
   );
 };
 

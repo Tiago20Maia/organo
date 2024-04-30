@@ -1,6 +1,19 @@
+import DropDownList from "../DropDownList";
 import TextField from "../TextField";
+import Button from "../Button";
+import "./index.css";
 
 const Form = () => {
+  const times = [
+    "Programação",
+    "Front-End",
+    "Data Science",
+    "Devops",
+    "UX e Design",
+    "Mobile",
+    " Inovação e Gestão",
+  ];
+
   return (
     <section className="form">
       <form>
@@ -11,6 +24,8 @@ const Form = () => {
           label="Imagem"
           placeholder="Digite o seu endereço da imagem"
         />
+        <DropDownList label="Time" itens={times} />
+        <Button text="Criar" />
       </form>
     </section>
   );

@@ -5,16 +5,6 @@ import "./index.css";
 import { useState } from "react";
 
 const Form = (props) => {
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    " Inovação e Gestão",
-  ];
-
   const [name, setName] = useState("");
   const [office, setOffice] = useState("");
   const [image, setImage] = useState("");
@@ -57,7 +47,7 @@ const Form = (props) => {
         <DropDownList
           required={true}
           label="Time"
-          itens={times}
+          itens={props.times}
           value={time}
           onChanged={(value) => setTime(value)}
         />

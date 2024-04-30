@@ -47,7 +47,10 @@ const App = () => {
   return (
     <div className="App">
       <Banner />
-      <Form onNewEmployeeCreate={(employees) => onNewEmployeeAdd(employees)} />
+      <Form
+        times={times.map((time) => time.name)}
+        onNewEmployeeCreate={(employees) => onNewEmployeeAdd(employees)}
+      />
 
       {times.map((time) => (
         <Time

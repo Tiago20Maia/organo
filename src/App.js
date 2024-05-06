@@ -58,6 +58,9 @@ const App = () => {
           name={time.name}
           primaryColor={time.primaryColor}
           secondaryColor={time.secondaryColor}
+          employees={employees.filter(
+            (employee) => employee.time === time.name
+          )}
         />
       ))}
     </div>

@@ -1,14 +1,14 @@
 import "./index.css";
 
-const Employee = () => {
+const Employee = ({ name, office, image }) => {
   return (
     <div className="employee">
       <div className="cabecalho">
-        <img src="https://github.com/Tiago20Maia.png" alt="Tiago Maia" />
+        <img src={image} alt={name} />
       </div>
       <div className="rodape">
-        <h4>Tiago Maia</h4>
-        <h5>Desenvolvedor</h5>
+        <h4>{name}</h4>
+        <h5>{office}</h5>
       </div>
     </div>
   );

@@ -5,8 +5,15 @@ const Time = (props) => {
   return (
     <section className="time" style={{ background: props.secondaryColor }}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
-      <Employee />
-      <Employee />
+      <div className="employees">
+        {props.employees.map((employee) => (
+          <Employee
+            name={employee.name}
+            office={employee.office}
+            image={employee.image}
+          />
+        ))}
+      </div>
     </section>
   );
 };

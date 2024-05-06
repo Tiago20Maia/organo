@@ -2,6 +2,7 @@ import { useState } from "react";
 import Banner from "./components/Banner";
 import Form from "./components/Form";
 import Time from "./components/Time";
+import Rodape from "./components/Rodape";
 
 const App = () => {
   const times = [
@@ -40,7 +41,7 @@ const App = () => {
   const [employees, setEmployees] = useState([]);
 
   const onNewEmployeeAdd = (employee) => {
-    console.log(employee);
+
     setEmployees([...employees, employee]);
   };
 
@@ -49,7 +50,7 @@ const App = () => {
       <Banner />
       <Form
         times={times.map((time) => time.name)}
-        onNewEmployeeCreate={(employees) => onNewEmployeeAdd(employees)}
+        onNewEmployeeCreate={(employee) => onNewEmployeeAdd(employee)}
       />
 
       {times.map((time) => (
@@ -63,6 +64,7 @@ const App = () => {
           )}
         />
       ))}
+      <Rodape />
     </div>
   );
 };

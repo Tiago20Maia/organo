@@ -18,6 +18,10 @@ const Form = (props) => {
       image,
       time,
     });
+    setName("");
+    setOffice("");
+    setImage("");
+    setTime("");
   };
 
   return (

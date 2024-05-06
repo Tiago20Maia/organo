@@ -1,9 +1,9 @@
 import "./index.css";
 
-const Employee = ({ name, office, image }) => {
+const Employee = ({ name, office, image, backgroundColor }) => {
   return (
     <div className="employee">
-      <div className="cabecalho">
+      <div className="cabecalho" style={{ backgroundColor: backgroundColor }}>
         <img src={image} alt={name} />
       </div>
       <div className="rodape">

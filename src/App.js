@@ -41,8 +41,11 @@ const App = () => {
   const [employees, setEmployees] = useState([]);
 
   const onNewEmployeeAdd = (employee) => {
-
     setEmployees([...employees, employee]);
+  };
+
+  const onDeleteEmployee = () => {
+    console.log("deletendo colaborador");
   };
 
   return (
@@ -62,6 +65,7 @@ const App = () => {
           employees={employees.filter(
             (employee) => employee.time === time.name
           )}
+          onDelete={onDeleteEmployee}
         />
       ))}
       <Rodape />

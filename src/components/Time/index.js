@@ -8,15 +8,18 @@ const Time = (props) => {
     <section className="time" style={css}>
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
       <div className="employees">
-        {props.employees.map((employee) => (
-          <Employee
-            backgroundColor={props.primaryColor}
-            key={employee.name}
-            name={employee.name}
-            office={employee.office}
-            image={employee.image}
-          />
-        ))}
+        {props.employees.map((employee) => {
+          return (
+            <Employee
+              backgroundColor={props.primaryColor}
+              key={employee.name}
+              name={employee.name}
+              office={employee.office}
+              image={employee.image}
+              onDelete={props.onDelete}
+            />
+          );
+        })}
       </div>
     </section>
   ) : (

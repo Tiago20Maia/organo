@@ -6,6 +6,14 @@ const Time = (props) => {
 
   return props.employees.length > 0 ? (
     <section className="time" style={css}>
+      <input
+        onChange={(event) =>
+          props.onChangeColor(event.target.value, props.name)
+        }
+        value={props.secondaryColor}
+        type="color"
+        className="input-color"
+      />
       <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
       <div className="employees">
         {props.employees.map((employee) => {

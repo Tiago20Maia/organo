@@ -5,7 +5,7 @@ import Time from "./components/Time";
 import Rodape from "./components/Rodape";
 
 const App = () => {
-  const times = [
+  const [times, setTimes] = useState([
     {
       name: "Front-End",
       primaryColor: "#82CFFA",
@@ -36,7 +36,7 @@ const App = () => {
       primaryColor: "#FF8A29",
       secondaryColor: "#FFEEDF",
     },
-  ];
+  ]);
 
   const [employees, setEmployees] = useState([]);
 
@@ -46,6 +46,17 @@ const App = () => {
 
   const onDeleteEmployee = () => {
     console.log("deletendo colaborador");
+  };
+
+  const changeColorTime = (color, name) => {
+    setTimes(
+      times.map((time) => {
+        if (time.name === name) {
+          time.secondaryColor = color;
+        }
+        return time;
+      })
+    );
   };
 
   return (
@@ -66,6 +77,7 @@ const App = () => {
             (employee) => employee.time === time.name
           )}
           onDelete={onDeleteEmployee}
+          onChangeColor={changeColorTime}
         />
       ))}
       <Rodape />
